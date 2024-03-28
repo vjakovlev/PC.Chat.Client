@@ -1,0 +1,22 @@
+<div class="container_custom">
+    <div class="card">
+        <form [formGroup]="joinRoomForm" class="card-body cardbody-color p-lg-5">
+        
+            <h2 class="text-center text-dark mt-5 mb-5">Welcome to PC Chat</h2>  
+    
+            <div class="mb-3">
+                <input formControlName="user" class="form-control" id="displayname" aria-describedby="emailHelp" placeholder="Display Name">
+            </div>
+    
+            <div class="mb-3">
+                <input formControlName="room" type="text" class="form-control" id=" roomname" placeholder="Room Name">
+            </div>
+    
+            <div class="text-center">
+                <button [disabled]="joinRoomForm.invalid" (click)="joinRoom()" type="submit" class="btn btn-primary px-5 mb-5 w-100">Join</button>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
